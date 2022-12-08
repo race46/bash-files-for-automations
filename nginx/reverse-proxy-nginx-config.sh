@@ -12,8 +12,7 @@ echo 'creating a config file for your website'
 
 echo $"server {
 
-	listen   443;
-	ssl    on;
+	listen   443 ssl;
 	ssl_certificate    /etc/nginx/ssl/server-cert.crt;
 	ssl_certificate_key    /etc/nginx/ssl/server-cert.key;
 	server_name selamke.com;
