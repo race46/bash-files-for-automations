@@ -5,6 +5,7 @@ echo 'creating keys for certification'
 sudo openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -sha384 -keyout server-cert.key -out server-cert.crt
 
 echo 'moving cert keys into nginx directory'
+sudo mkdir /etc/nginx/ssl
 sudo mv ./server-cert.key /etc/nginx/ssl/server-cert.key
 sudo mv ./server-cert.crt /etc/nginx/ssl/server-cert.crt
 
